@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Men déroulant</title>
+</head>
+<body>
+
+
+<ul id="menu">
+  <li>
+    <a href="#" id="menu1">Menu 1</a>
+    <ul style="display:none;" class="sousMenu1">
+      <li>Sous-menu 1.1</li>
+      <li>Sous-menu 1.2</li>
+      <li>Sous-menu 1.3</li>
+    </ul>
+  </li>
+  <li>
+    <a href="#" id="menu2">Menu 2</a>
+    <ul style="display:none;" class="sousMenu2" >
+      <li>Sous-menu 2.1</li>
+      <li>Sous-menu 2.2</li>
+      <li>Sous-menu 2.3</li>
+    </ul>
+  </li>
+   <li>
+    <a href="#" id="menu3">Menu 3</a>
+    <ul style="display:none;" class="sousMenu3">
+      <li>Sous-menu 3.1</li>
+      <li>Sous-menu 3.2</li>
+      <li>Sous-menu 3.3</li>
+    </ul>
+  </li>
+</ul>
+
+
+<style type="text/css">
+
+#menu1,
+#menu2,
+#menu3 { border: 1px solid green; background-color: grey; padding-left: 100px; text-align: center; padding-top: 10px; padding-bottom: 10px; border-radius: 10px;}
+
+
+ul li { display:inline-block; 
+				list-style: none;  
+				padding-left: 20px;
+				text-align: center; }
+
+
+a {color:white; text-decoration: none;}
+
+
+</style>
+
+
+
+
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+
+
+  	$(function(){
+
+  		$('#menu1').click(function(){
+  			$('.sousMenu1').css("display", "inline-block");
+  		});
+
+  		 $('#menu2').click(function(){
+  			$('.sousMenu2').css("display", "inline-block");
+  		});
+
+  		$('#menu3').click(function(){
+  			$('.sousMenu3').css("display", "inline-block");
+  		});
+  	});
+
+
+
+
+  </script>
+
+</body>
+</html>

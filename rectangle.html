@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>5 Boutons</title>
+</head>
+<body>
+<canvas id="monCanvas" height="300" width="300" style="background-color: #e0e1e2;"></canvas>
+
+<button type="button" id="button1" onclick="taille()"> Bouton 1</button>
+<button type="button" id="button2" onclick="changeCouleur()"">Bouton 2</button>
+<button type="button" id="button3" onclick="resetColor()">Bouton 3 </button>
+<button type="button" id="button4" onclick="hideRectangle()">Bouton 4</button>
+<button type="button" id="button5">Bouton 5</button>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script> <!-- CDN jQuery -->
+
+
+
+  <script type="text/javascript">
+
+		let c = document.getElementById("monCanvas");
+		let ctx = c.getContext("2d");
+		let largeur = 180;
+		let hauteur = 100;
+
+
+
+	function CreationRect(){
+		ctx.beginPath();
+		ctx.fillStyle = "yellow";
+		ctx.fillRect(1, 1, largeur, hauteur);
+		ctx.fill();
+		ctx.closePath();
+	}
+	
+CreationRect();
+
+
+	function taille(){
+		CreationRect();
+		hauteur += 10;
+		if (hauteur ==320){
+			hauteur ==100;
+		}
+	}
+
+taille();
+
+
+	function changeCouleur(){
+		ctx.clearRect(0,0,largeur,hauteur);
+		ctx.fillStyle="red";
+		ctx.fillRect(1,1, largeur, hauteur);
+	}
+
+
+
+
+
+	function resetColor(){
+		ctx.clearRect(0,0,largeur,hauteur);
+		ctx.fillStyle= "yellow";
+		ctx.fillRect(1,1, largeur, hauteur);
+		ctx.fill();
+	}
+
+
+	function hideRectangle(){
+		ctx.hidden = true;
+	}
+	
+
+
+
+
+	
+  </script>
+
+
+
+</body>
+</html>
